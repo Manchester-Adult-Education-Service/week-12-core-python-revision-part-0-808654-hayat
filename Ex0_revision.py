@@ -172,6 +172,16 @@ weekly_sales = [120.50, 155.75, 95.00, 180.25, 130.50]
 # 5. Print both the 'total_sales' and 'average_sale', formatted to two decimal places.
 
 # Write your code below:
+total_sales = 0
+count = 1
+for sale in weekly_sales :
+    #print(sale)
+    #count += 1
+    total_sales = sum(weekly_sales)
+    print(f"Total sales for the week: £{total_sales:.2f}")
+
+    average_sale = total_sales / 5 
+    print(f"Average sale : £{average_sale:.2f}")
 
 
 # -------------------------------------------
@@ -212,7 +222,13 @@ product_catalogue = {
 # 4. If the code does not exist, print "Error: Product code not found."
 
 # Write your code below:
-
+code = input("Enter a product code\n")
+if code in product_catalogue:
+    price = product_catalogue[code]
+    print(f"Product Code: {code}, Price: £{price:.2f}")
+else:
+    print()
+    print("Error! product code not found.")
 
 # -------------------------------------------
 # CHECKPOINT
@@ -262,6 +278,14 @@ print("\n-------------------------------------------\n"
     + "-------------------------------------------")
 
 # Write your code below:
+secret_colour = "red" 
+while True :
+    user_guess = input("Guess what is the secret colour?\n")
+    if user_guess == secret_colour:
+        print("You guessed it!")
+        break
+    else:
+        print("Try again!")
 
 
 # -------------------------------------------
@@ -286,7 +310,12 @@ data_set = [3, 12, 5, 8, 17, 24, 9, 10]
 even_numbers = []
 
 # Write your code below:
-
+even_numbers = []
+for i in data_set :
+    if i % 2 == 0 :
+        even_numbers.append(i)
+        
+print(f"The even numbers are : {even_numbers}")   
 
 # -------------------------------------------
 # ADVANCED ACTIVITY: Combining Concepts
